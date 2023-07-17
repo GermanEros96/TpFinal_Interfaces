@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(../img/Fondo.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80%;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    z-index: 10;
+  }
+  
+  nav {
+    width: 100%;
+    margin: auto;
+    background-color: #333;
+    font-size: 20px;
+  }
+  
+  .menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  
+  .menu-horizontal li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-horizontal li:hover {
+    background-color: #9b4848;
+    transition: 1s;
+  }
+  
+  .menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: #333;
+  }
+  
+  .menu-horizontal li:hover .menu-vertical {
+    display: block;
+  }
+  
+  .menu-vertical li:hover {
+    width: auto;
+    background-color: #9b4848;
+  }
+  
+  .menu-vertical li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-horizontal > div {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-horizontal > div > a {
+    text-decoration: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #c9c8c8;
+    letter-spacing: -2px;
+  }
+  
+  .menu-horizontal > div > a > span {
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .menu-horizontal > div > a > span:hover {
+    color: #9b4848;
+  }
+  
+  .nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media screen and (max-width: 767px) {
+    header {
+      position: fixed;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-horizontal {
+      flex-wrap: wrap;
+    }
+  
+    .menu-horizontal li {
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+  
+    .menu-horizontal li a {
+      padding: 10px 20px;
+    }
+  
+    .menu-vertical {
+      position: static;
+      display: none;
+      background-color: #333;
+    }
+  
+    .menu-horizontal li:hover .menu-vertical {
+      display: block;
+    }
+  
+    .menu-vertical li {
+      width: 100%;
+    }
+  
+    .menu-vertical li a {
+      padding: 10px 20px;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  }
+
+  .Quienes{
+    margin: 100px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Monoton';
+    font-size: 50px;
+    color: white;
+}
+
+/* CSS Lista */
+
+ .list{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.list > h2 > a{
+  font-family: 'Monoton';
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+
+}
+
+.list > h2 > a:hover{
+
+  color: #9b4848;
+}
+
+  /* CSS Carta */
+
+  .menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+}
+.heading{
+    background-color: #cb202d;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding: 120px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(90, 57, 57);
+    margin: 0 20px;
+    background-color: #9b4848;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+
+    font-weight: 600;
+    font-size: 25px;
+}
+.price{
+    text-align: right;
+    font-size: 20px;
+    color: #333;
+}
+.details>p{
+    color: #d3d2d2;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+
+  
+
+
+
+/** Pie de Pagina **/
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+
+    
+}
+
+@media (max-height: 1000px){
+    footer{
+        position: static;
+    }
+}
+
+.Pie-de-pagina{
+    background-color: #333;
+    box-sizing: border-box;
+    widows: 100%;
+    text-align: left;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+    margin: auto;
+    width: 100%;
+    max width: 1200px;   
+}
+
+.Pie-de-pagina .pie-izquierdo, .Pie-de-pagina .pie-centro, .Pie-de-pagina .pie-derecho{
+
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.Pie-de-pagina .pie-izquierdo{
+    width: 30%;
+}
+
+.Pie-de-pagina h3 {
+    color: white;
+}
+
+.Pie-de-pagina .pie-links{
+    color: white;
+    margin: 20px 0 12px;
+
+}
+
+.Pie-de-pagina .pie-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.Pie-de-pagina .pie-nombre-compania{
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.Pie-de-pagina .pie-centro{
+    width: 35%;
+}
+
+.Pie-de-pagina .pie-centro i {
+    background-color: #333;
+    color: white;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.Pie-de-pagina .pie-centro i .fe-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.Pie-de-pagina .pie-centro p{
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.Pie-de-pagina .pie-centro p a{
+    color:#9b4848;
+    text-decoration: none;
+}
+
+.Pie-de-pagina .pie-derecho{
+    width: 30%;
+}
+
+.Pie-de-pagina .pie-compania-acerca {
+    line-height: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.Pie-de-pagina .pie-compania-acerca span {
+    display: block;
+    color:#9b4848;
+    font-size:  18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Pie-de-pagina .pie-iconos{
+    margin-top: 25px;
+}
+
+.Pie-de-pagina .pie-iconos a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #333;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.Pie-de-pagina .pie-iconos a:hover{
+    background-color: #9b4848;
+}
+
+.pie-links a:hover{
+    color:#9b4848;
+}
+
+@media (max-width: 800px){
+    .Pie-de-pagina .pie-links, .Pie-de-pagina .pie-centro, .Pie-de-pagina .pie-derecho, .Pie-de-pagina .pie-izquierdo{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .Pie-de-pagina .pie-centro i {
+        margin-left: 0;
+    }
+}
